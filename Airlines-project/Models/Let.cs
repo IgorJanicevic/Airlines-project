@@ -15,12 +15,13 @@ namespace Airlines_project.Models
         public int BrojSlobodnihMesta { get; set; }
         public decimal Cena { get; set; }
         public StatusLeta Status { get; set; }
-    }
+    } 
 
     public enum StatusLeta
     {
         Aktivan,
-        Otkazan
+        Otkazan,
+        Zavrsen
     }
 
 }

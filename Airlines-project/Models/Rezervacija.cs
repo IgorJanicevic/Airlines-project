@@ -7,8 +7,8 @@ namespace Airlines_project.Models
 {
     public class Rezervacija
     {
-        public int Korisnik { get; set; }
-        public int Let { get; set; }
+        public string Korisnik { get; set; }
+        public Let Let { get; set; }
         public int BrojPutnika { get; set; }
         public decimal UkupnaCena { get; set; }
         public StatusRezervacije Status { get; set; }

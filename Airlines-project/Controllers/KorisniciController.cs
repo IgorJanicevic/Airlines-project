@@ -1,5 +1,6 @@
 ﻿using Airlines_project.Models;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Airlines_project.Controllers
 {
     public class KorisniciController : ApiController
     {
-        private readonly string  korisniciFilePath = "C:\\Users\\HomePC\\Desktop\\Airlines-project\\Airlines-project\\App_Data\\korisnici.json";
+        private readonly string korisniciFilePath = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/korisnici.json");
 
         // POST api/korisnici/registracija
         [HttpPost]
@@ -58,6 +59,27 @@ namespace Airlines_project.Controllers
 
             return Ok($"Uspešno ste se ulogovali, {korisnik.Ime}!");
         }
+
+
+
+        // GET api/korisnici/{korisnickoIme}
+        [HttpGet]
+        [Route("api/korisnici/{korisnickoIme}")]
+        public IHttpActionResult GetKorisnikByKorisnickoIme(string korisnickoIme)
+        {
+            
+            List<Korisnik> korisnici = LoadKorisniciFromFile();
+            Korisnik korisnik = korisnici.FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme.ToString()));
+
+            if (korisnik == null)
+            {
+                return Ok(korisnici[0]);
+            }
+
+            return Ok(korisnik);
+        }
+
+
 
         // Privatne pomoćne funkcije za rad sa fajlom korisnici.json
 

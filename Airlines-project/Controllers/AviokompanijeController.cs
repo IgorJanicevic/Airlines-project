@@ -62,7 +62,7 @@ namespace Airlines_project.Controllers
                 {
                     return NotFound();
                 }
-                return Ok(kompanija);
+            return Ok(kompanija);
            
             
         }

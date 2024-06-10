@@ -13,6 +13,7 @@
 <body>
     <div class="container mt-4">
         <h2 class="text-center mb-4">Podaci o aviokompaniji</h2>
+
         <div id="aviokompanijaDetails"></div>
     </div>
 
@@ -24,28 +25,30 @@
             if (aviokompanijaId) {
                 // Učitavanje podataka o aviokompaniji na osnovu ID-ja
                 $.get(`/api/aviokompanije/${aviokompanijaId}`, function (aviokompanija) {
-                    alert(aviokompanija.Adresa);
                     const aviokompanijaDetails = $('#aviokompanijaDetails');
 
                     const aviokompanijaElement = `
-=                            <h5>${aviokompanija.Naziv}</h5>
-                            <p><strong>Adresa:</strong> ${aviokompanija.Adresa}</p>
-                            <p><strong>Kontakt:</strong> ${aviokompanija.KontaktInformacije}</p>
-                            <h6>Letovi:</h6>`;
-
-                    //const prikazLetova = '<ul>';
-                    //prikazLetova = generateLetoviList(aviokompanija.Letovi);
-                    //const prikazRecenzija = generateLetoviList(aviokompanija.Recenzije);
-                    //aviokompanijaElement += prikazLetova;
-                    //aviokompanijaElement += '</ul>';
-                    //aviokompanijaElement += '<h6>Recenzije:</h6><ul>';
-                    //aviokompanijaElement += prikazRecenzija;
-                    //aviokompanijaElement += '</ul>';
-                    aviokompanija.Letovi.forEach(let => alert(let.Naziv));
-                    aviokompanijaDetails.append(aviokompanijaElement);
+                            <div>
+                                <h5>${aviokompanija.Naziv}</h5>
+                                <p><strong>Adresa:</strong> ${aviokompanija.Adresa}</p>
+                                <p><strong>Kontakt:</strong> ${aviokompanija.KontaktInformacije}</p>
+                                <h6>Letovi:</h6>
+                                <ul>
+                                    ${generateLetoviList(aviokompanija.Letovi)}
+                                </ul>
+                                <h6>Recenzije:</h6>
+                                <ul>
+                                    ${generateRecenzijeList(aviokompanija.Recenzije)}
+                                </ul>
+                            </div>
+                        `;
+                    aviokompanijaDetails.html(aviokompanijaElement);
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    console.error('Greška prilikom učitavanja podataka o aviokompaniji:', textStatus, errorThrown);
                 });
             } else {
                 // Ukoliko ne postoji ID, možete uputiti korisnika nazad na stranicu sa listom aviokompanija
+                console.error('Nedostaje ID aviokompanije.');
                 window.location.href = 'index.html';
             }
         });
@@ -55,10 +58,10 @@
             if (letovi.length > 0) {
                 letovi.forEach(let => {
                     letoviList += `
-                <li>
-                    ${let.PolaznaDestinacija} - ${let.OdredisnaDestinacija}, Polazak: ${new Date(let.DatumVremePolaska).toLocaleString()}, Dolazak: ${new Date(let.DatumVremeDolaska).toLocaleString()}, Mesta: ${let.BrojSlobodnihMesta}, Cena: $${let.Cena}
-                </li>
-            `;
+                            <li>
+                                ${let.PolaznaDestinacija} - ${let.OdredisnaDestinacija}, Polazak: ${new Date(let.DatumVremePolaska).toLocaleString()}, Dolazak: ${new Date(let.DatumVremeDolaska).toLocaleString()}, Mesta: ${let.BrojSlobodnihMesta}, Cena: $${let.Cena}
+                            </li>
+                        `;
                 });
             } else {
                 letoviList = '<li>Nema dostupnih letova.</li>';
@@ -66,15 +69,25 @@
             return letoviList;
         }
 
+
         function generateRecenzijeList(recenzije) {
             let recenzijeList = '';
             if (recenzije.length > 0) {
                 recenzije.forEach(recenzija => {
-                    recenzijeList += `
+                    if (recenzija.Status === 1) { // Assuming 1 corresponds to "Odobrena"
+                        recenzijeList += `
                 <li>
-                    ${recenzija.Korisnik} - Ocena: ${recenzija.Ocena}, Komentar: ${recenzija.Komentar}
-                </li>
-            `;
+                    <h5>${recenzija.Recezent}</h5>`;
+
+                        if (recenzija.Slika && recenzija.Slika.trim() !== "") {
+                            const imageUrl = encodeURI(recenzija.Slika);
+                            recenzijeList += `<img src='${imageUrl}' alt='${recenzija.Naslov}' style='width: 100px; height: auto;'>`;
+                            
+                        }
+
+                        recenzijeList += `<p>${recenzija.Sadrzaj}</p>
+                </li>`;
+                    }
                 });
             } else {
                 recenzijeList = '<li>Nema dostupnih recenzija.</li>';

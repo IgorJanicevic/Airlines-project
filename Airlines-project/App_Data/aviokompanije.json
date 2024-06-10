@@ -6,6 +6,7 @@
     "KontaktInformacije": "+381 11 1234567",
     "Letovi": [
       {
+        "Aviokompanija": "Air Serbia",
         "PolaznaDestinacija": "Beograd",
         "OdredisnaDestinacija": "New York",
         "DatumVremePolaska": "2024-06-15T14:00:00",
@@ -16,9 +17,11 @@
     ],
     "Recenzije": [
       {
-        "Korisnik": "Marko Markovic",
-        "Ocena": 5,
-        "Komentar": "Odlična usluga i udobnost."
+        "Recezent": "Igor Janicevic",
+        "Naslov": "Odlična usluga i udobnost",
+        "Sadrzaj": "Sve pohvale za aviokompaniju. Usuga je bila na visokom nivou.",
+        "Slika": "Resources/Images/slika1.jpg",
+        "Status": "Odobrena"
       }
     ]
   },
@@ -29,19 +32,23 @@
     "KontaktInformacije": "+49 69 867987",
     "Letovi": [
       {
-        "PolaznaDestinacija": "Frankfurt",
-        "OdredisnaDestinacija": "Tokyo",
-        "DatumVremePolaska": "2024-07-01T10:00:00",
-        "DatumVremeDolaska": "2024-07-01T22:00:00",
-        "BrojSlobodnihMesta": 30,
-        "Cena": 800
+        "Aviokompanija": "Lufthansa",
+        "PolaznaDestinacija": "Beograd",
+        "OdredisnaDestinacija": "Frankfurt",
+        "DatumVremePolaska": "2024-06-15T08:00:00",
+        "DatumVremeDolaska": "2024-06-15T10:00:00",
+        "BrojSlobodnihMesta": 50,
+        "Cena": 150,
+        "Status": "Aktivan"
       }
     ],
     "Recenzije": [
       {
-        "Korisnik": "Anna Schmidt",
-        "Ocena": 4,
-        "Komentar": "Vrlo dobra usluga, ali skupa."
+        "Recezent": "Baki",
+        "Naslov": "Vrlo dobra usluga, ali skupa",
+        "Sadrzaj": "Usluga je bila vrlo dobra, ali karta je bila skuplja nego što sam očekivao.",
+        "Slika": "Resources/Images/slika2.jpg",
+        "Status": "Odobrena"
       }
     ]
   },
@@ -52,19 +59,23 @@
     "KontaktInformacije": "+49 69 867987",
     "Letovi": [
       {
+        "Aviokompanija": "Turkish Airlines",
         "PolaznaDestinacija": "Beograd",
-        "OdredisnaDestinacija": "Instabul",
-        "DatumVremePolaska": "2024-07-01T10:00:00",
-        "DatumVremeDolaska": "2024-07-01T22:00:00",
-        "BrojSlobodnihMesta": 30,
-        "Cena": 800
+        "OdredisnaDestinacija": "Istanbul",
+        "DatumVremePolaska": "2024-06-20T20:00:00",
+        "DatumVremeDolaska": "2024-06-20T22:00:00",
+        "BrojSlobodnihMesta": 75,
+        "Cena": 200,
+        "Status": "Aktivan"
       }
     ],
     "Recenzije": [
       {
-        "Korisnik": "Anna Schmidt",
-        "Ocena": 4,
-        "Komentar": "Vrlo dobra usluga, ali skupa."
+        "Recezent": "Teodora22",
+        "Naslov": "Dobra usluga",
+        "Sadrzaj": "Usluga je bila na zadovoljavajućem nivou, ali moglo bi biti bolje.",
+        "Slika": "Resources/Images/slika3.jpg",
+        "Status": "Odobrena"
       }
     ]
   }

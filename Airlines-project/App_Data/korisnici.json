@@ -20,5 +20,16 @@
     "Pol": 1,
     "TipKorisnika": 1,
     "ListaRezervacija": []
+  },
+  {
+    "KorisnickoIme": "Ivan Jan",
+    "Lozinka": "ivan",
+    "Ime": "Ivan",
+    "Prezime": "Janicevic",
+    "Email": "milkomilkic@yahoo.com",
+    "DatumRodjenja": "2003-03-11T00:00:00",
+    "Pol": 0,
+    "TipKorisnika": 0,
+    "ListaRezervacija": []
   }
 ]
