@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviokompanija</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Podaci o aviokompaniji</h2>
+        <div id="aviokompanijaDetails"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const aviokompanijaId = urlParams.get('id');
+
+            if (aviokompanijaId) {
+                // Učitavanje podataka o aviokompaniji na osnovu ID-ja
+                $.get(`/api/aviokompanije/${aviokompanijaId}`, function (aviokompanija) {
+                    alert(aviokompanija.Adresa);
+                    const aviokompanijaDetails = $('#aviokompanijaDetails');
+
+                    const aviokompanijaElement = `
+=                            <h5>${aviokompanija.Naziv}</h5>
+                            <p><strong>Adresa:</strong> ${aviokompanija.Adresa}</p>
+                            <p><strong>Kontakt:</strong> ${aviokompanija.KontaktInformacije}</p>
+                            <h6>Letovi:</h6>`;
+
+                    //const prikazLetova = '<ul>';
+                    //prikazLetova = generateLetoviList(aviokompanija.Letovi);
+                    //const prikazRecenzija = generateLetoviList(aviokompanija.Recenzije);
+                    //aviokompanijaElement += prikazLetova;
+                    //aviokompanijaElement += '</ul>';
+                    //aviokompanijaElement += '<h6>Recenzije:</h6><ul>';
+                    //aviokompanijaElement += prikazRecenzija;
+                    //aviokompanijaElement += '</ul>';
+                    aviokompanija.Letovi.forEach(let => alert(let.Naziv));
+                    aviokompanijaDetails.append(aviokompanijaElement);
+                });
+            } else {
+                // Ukoliko ne postoji ID, možete uputiti korisnika nazad na stranicu sa listom aviokompanija
+                window.location.href = 'index.html';
+            }
+        });
+
+        function generateLetoviList(letovi) {
+            let letoviList = '';
+            if (letovi.length > 0) {
+                letovi.forEach(let => {
+                    letoviList += `
+                <li>
+                    ${let.PolaznaDestinacija} - ${let.OdredisnaDestinacija}, Polazak: ${new Date(let.DatumVremePolaska).toLocaleString()}, Dolazak: ${new Date(let.DatumVremeDolaska).toLocaleString()}, Mesta: ${let.BrojSlobodnihMesta}, Cena: $${let.Cena}
+                </li>
+            `;
+                });
+            } else {
+                letoviList = '<li>Nema dostupnih letova.</li>';
+            }
+            return letoviList;
+        }
+
+        function generateRecenzijeList(recenzije) {
+            let recenzijeList = '';
+            if (recenzije.length > 0) {
+                recenzije.forEach(recenzija => {
+                    recenzijeList += `
+                <li>
+                    ${recenzija.Korisnik} - Ocena: ${recenzija.Ocena}, Komentar: ${recenzija.Komentar}
+                </li>
+            `;
+                });
+            } else {
+                recenzijeList = '<li>Nema dostupnih recenzija.</li>';
+            }
+            return recenzijeList;
+        }
+    </script>
+</body>
+</html>

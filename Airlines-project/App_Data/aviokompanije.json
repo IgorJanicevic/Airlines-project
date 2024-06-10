@@ -1,0 +1,71 @@
+﻿[
+  {
+    "AviokompanijaId": 1,
+    "Naziv": "Air Serbia",
+    "Adresa": "Jurija Gagarina 12, Beograd, Srbija",
+    "KontaktInformacije": "+381 11 1234567",
+    "Letovi": [
+      {
+        "PolaznaDestinacija": "Beograd",
+        "OdredisnaDestinacija": "New York",
+        "DatumVremePolaska": "2024-06-15T14:00:00",
+        "DatumVremeDolaska": "2024-06-15T18:00:00",
+        "BrojSlobodnihMesta": 50,
+        "Cena": 500
+      }
+    ],
+    "Recenzije": [
+      {
+        "Korisnik": "Marko Markovic",
+        "Ocena": 5,
+        "Komentar": "Odlična usluga i udobnost."
+      }
+    ]
+  },
+  {
+    "AviokompanijaId": 2,
+    "Naziv": "Lufthansa",
+    "Adresa": "Venloer Str. 151-153, 50672 Köln, Germany",
+    "KontaktInformacije": "+49 69 867987",
+    "Letovi": [
+      {
+        "PolaznaDestinacija": "Frankfurt",
+        "OdredisnaDestinacija": "Tokyo",
+        "DatumVremePolaska": "2024-07-01T10:00:00",
+        "DatumVremeDolaska": "2024-07-01T22:00:00",
+        "BrojSlobodnihMesta": 30,
+        "Cena": 800
+      }
+    ],
+    "Recenzije": [
+      {
+        "Korisnik": "Anna Schmidt",
+        "Ocena": 4,
+        "Komentar": "Vrlo dobra usluga, ali skupa."
+      }
+    ]
+  },
+  {
+    "AviokompanijaId": 3,
+    "Naziv": "Airline Turkish",
+    "Adresa": "Istanbul Str. 151-153, 50672 Center, Turkey",
+    "KontaktInformacije": "+49 69 867987",
+    "Letovi": [
+      {
+        "PolaznaDestinacija": "Beograd",
+        "OdredisnaDestinacija": "Instabul",
+        "DatumVremePolaska": "2024-07-01T10:00:00",
+        "DatumVremeDolaska": "2024-07-01T22:00:00",
+        "BrojSlobodnihMesta": 30,
+        "Cena": 800
+      }
+    ],
+    "Recenzije": [
+      {
+        "Korisnik": "Anna Schmidt",
+        "Ocena": 4,
+        "Komentar": "Vrlo dobra usluga, ali skupa."
+      }
+    ]
+  }
+]

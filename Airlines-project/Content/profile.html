@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .profile-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+            .profile-form h2 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+    </style>
+</head>
+<body style="background-color: cadetblue;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Letovi</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navMyProfile">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" id="navLogin">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="navLogout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="profile-form">
+            <h2 style="color:#007bff;">My Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="username">Korisničko ime</label>
+                    <input type="text" class="form-control" id="username" name="username" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="ime">Ime</label>
+                    <input type="text" class="form-control" id="ime" name="ime" required>
+                </div>
+                <div class="form-group">
+                    <label for="prezime">Prezime</label>
+                    <input type="text" class="form-control" id="prezime" name="prezime" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="datumRodjenja">Datum rođenja</label>
+                    <input type="date" class="form-control" id="datumRodjenja" name="datumRodjenja" required>
+                </div>
+                <div class="form-group">
+                    <label for="pol">Pol</label>
+                    <select class="form-control" id="pol" name="pol" required>
+                        <option value="Muski">Muški</option>
+                        <option value="Zenski">Ženski</option>
+                        <option value="Ostalo">Ostalo</option>
+                    </select>
+                </div>
+                <button type="submit" id="btnUpdate" class="btn btn-primary btn-block">Ažuriraj</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#navLogin').hide();
+            $('#navLogout').hide();
+
+            let currentUser = sessionStorage.getItem('currentUser');
+            if (currentUser) {
+                currentUser = JSON.parse(currentUser);
+                $('#navLogin').hide();
+                $('#navLogout').show();
+                $('#navMyProfile').attr('href', 'profile.html');
+                populateProfile(currentUser);
+            } else {
+                $('#navLogin').show();
+                $('#navLogout').hide();
+                $('#navMyProfile').attr('href', 'login.html');
+                window.location.href = 'login.html'; // Ako korisnik nije prijavljen, preusmeri ga na login stranicu
+            }
+
+            $('#navLogout').click(function (event) {
+                event.preventDefault();
+                logoutUser();
+            });
+
+            $('#profileForm').submit(function (event) {
+                event.preventDefault();
+                updateProfile(currentUser);
+            });
+        });
+
+        function populateProfile(user) {
+            $('#username').val(user.korisnickoime);
+            $('#ime').val(user.ime);
+            $('#prezime').val(user.prezime);
+            $('#email').val(user.email);
+            $('#datumRodjenja').val(user.datumRodjenja);
+            $('#pol').val(user.pol);
+        }
+
+        function updateProfile(user) {
+            user.ime = $('#ime').val();
+            user.prezime = $('#prezime').val();
+            user.email = $('#email').val();
+            user.datumRodjenja = $('#datumRodjenja').val();
+            user.pol = $('#pol').val();
+
+            // Simulacija ažuriranja profila (može se proširiti sa AJAX pozivom ka serveru)
+            alert('Profil uspešno ažuriran.');
+
+            // Ažuriraj korisnika u sessionStorage
+            sessionStorage.setItem('currentUser', JSON.stringify(user));
+        }
+
+        function logoutUser() {
+            // Brisanje korisnika iz sessionStorage
+            sessionStorage.removeItem('currentUser');
+            alert('Uspešno ste se odjavili.');
+            window.location.href = 'index.html'; // Preusmeri korisnika na početnu stranicu
+        }
+    </script>
+</body>
+</html>

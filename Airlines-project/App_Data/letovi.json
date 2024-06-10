@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Aviokompanija": "Air Serbia",
+    "PolaznaDestinacija": "Beograd",
+    "OdredisnaDestinacija": "New York",
+    "DatumVremePolaska": "2024-06-10T10:00:00",
+    "DatumVremeDolaska": "2024-06-10T16:00:00",
+    "BrojSlobodnihMesta": 100,
+    "Cena": 500,
+    "Status": "Aktivan"
+  },
+  {
+    "Aviokompanija": "Lufthansa",
+    "PolaznaDestinacija": "Beograd",
+    "OdredisnaDestinacija": "Frankfurt",
+    "DatumVremePolaska": "2024-06-15T08:00:00",
+    "DatumVremeDolaska": "2024-06-15T10:00:00",
+    "BrojSlobodnihMesta": 50,
+    "Cena": 150,
+    "Status": "Aktivan"
+  },
+  {
+    "Aviokompanija": "Turkish Airlines",
+    "PolaznaDestinacija": "Beograd",
+    "OdredisnaDestinacija": "Istanbul",
+    "DatumVremePolaska": "2024-06-20T20:00:00",
+    "DatumVremeDolaska": "2024-06-20T22:00:00",
+    "BrojSlobodnihMesta": 75,
+    "Cena": 200,
+    "Status": "Aktivan"
+  }
+]

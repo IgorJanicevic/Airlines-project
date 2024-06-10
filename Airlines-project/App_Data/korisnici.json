@@ -1,0 +1,24 @@
+[
+  {
+    "KorisnickoIme": "IgorJ",
+    "Lozinka": "123",
+    "Ime": "Igor",
+    "Prezime": "Janicevic",
+    "Email": "marko.markovic@example.com",
+    "DatumRodjenja": "1990-05-15T00:00:00",
+    "Pol": 0,
+    "TipKorisnika": 0,
+    "ListaRezervacija": []
+  },
+  {
+    "KorisnickoIme": "ana_89",
+    "Lozinka": "ana123!",
+    "Ime": "Ana",
+    "Prezime": "Anić",
+    "Email": "ana.anic@example.com",
+    "DatumRodjenja": "1989-12-28T00:00:00",
+    "Pol": 1,
+    "TipKorisnika": 1,
+    "ListaRezervacija": []
+  }
+]
