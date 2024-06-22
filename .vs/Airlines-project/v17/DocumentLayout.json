@@ -3,68 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\scripts\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\scripts\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\scripts\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\models\\rezervacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\models\\rezervacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\content\\aviokompanija.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\content\\aviokompanija.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\content\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\app_data\\korisnici.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\app_data\\korisnici.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\content\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\content\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\controllers\\aviokompanijecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\aviokompanijecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\scripts\\aviokompanije.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\scripts\\aviokompanije.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\scripts\\registracija.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\scripts\\registracija.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\scripts\\letovi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\scripts\\letovi.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\letovicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\letovicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|c:\\users\\homepc\\documents\\github\\airlines-project\\airlines-project\\app_data\\aviokompanije.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\app_data\\aviokompanije.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\korisnicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\app_data\\letovi.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\app_data\\letovi.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\models\\let.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\models\\let.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\aviokompanijecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\aviokompanijecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\airlines-project\\content\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73772E54-70E1-4147-9E67-1BE5553F49DC}|Airlines-project\\Airlines-project.csproj|solutionrelative:airlines-project\\content\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,22 +50,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Rezervacija.cs",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Rezervacija.cs",
-              "RelativeDocumentMoniker": "Airlines-project\\Models\\Rezervacija.cs",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Rezervacija.cs",
-              "RelativeToolTip": "Airlines-project\\Models\\Rezervacija.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T19:41:29.32Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -97,123 +59,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "aviokompanija.html",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\aviokompanija.html",
-              "RelativeDocumentMoniker": "Airlines-project\\Content\\aviokompanija.html",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\aviokompanija.html",
-              "RelativeToolTip": "Airlines-project\\Content\\aviokompanija.html",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-10T20:41:50.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "registracija.js",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\registracija.js",
-              "RelativeDocumentMoniker": "Airlines-project\\Scripts\\registracija.js",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\registracija.js",
-              "RelativeToolTip": "Airlines-project\\Scripts\\registracija.js",
+              "Title": "Site.css",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Site.css",
+              "RelativeDocumentMoniker": "Airlines-project\\Content\\Site.css",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Site.css",
+              "RelativeToolTip": "Airlines-project\\Content\\Site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-10T20:41:07.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "letovi.js",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\letovi.js",
-              "RelativeDocumentMoniker": "Airlines-project\\Scripts\\letovi.js",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\letovi.js",
-              "RelativeToolTip": "Airlines-project\\Scripts\\letovi.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-10T20:40:51.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "aviokompanije.js",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\aviokompanije.js",
-              "RelativeDocumentMoniker": "Airlines-project\\Scripts\\aviokompanije.js",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\aviokompanije.js",
-              "RelativeToolTip": "Airlines-project\\Scripts\\aviokompanije.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-10T20:40:31.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AviokompanijeController.cs",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\AviokompanijeController.cs",
-              "RelativeDocumentMoniker": "Airlines-project\\Controllers\\AviokompanijeController.cs",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\AviokompanijeController.cs",
-              "RelativeToolTip": "Airlines-project\\Controllers\\AviokompanijeController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:40:03.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "aviokompanije.json",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\aviokompanije.json",
-              "RelativeDocumentMoniker": "Airlines-project\\App_Data\\aviokompanije.json",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\aviokompanije.json",
-              "RelativeToolTip": "Airlines-project\\App_Data\\aviokompanije.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-10T20:34:44.069Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-22T19:41:34.999Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Korisnik.cs",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Korisnik.cs",
-              "RelativeDocumentMoniker": "Airlines-project\\Models\\Korisnik.cs",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Korisnik.cs",
-              "RelativeToolTip": "Airlines-project\\Models\\Korisnik.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T20:34:26.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "korisnici.json",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\korisnici.json",
-              "RelativeDocumentMoniker": "Airlines-project\\App_Data\\korisnici.json",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\korisnici.json",
-              "RelativeToolTip": "Airlines-project\\App_Data\\korisnici.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-10T20:34:21.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "letovi.json",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\letovi.json",
-              "RelativeDocumentMoniker": "Airlines-project\\App_Data\\letovi.json",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\App_Data\\letovi.json",
-              "RelativeToolTip": "Airlines-project\\App_Data\\letovi.json",
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\styles.css",
+              "RelativeDocumentMoniker": "Airlines-project\\Content\\styles.css",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\styles.css",
+              "RelativeToolTip": "Airlines-project\\Content\\styles.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-10T20:13:41.022Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-22T19:41:34.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "Airlines-project\\Controllers\\ValuesController.cs",
@@ -221,21 +90,80 @@
               "RelativeToolTip": "Airlines-project\\Controllers\\ValuesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T19:41:25.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T19:41:33.172Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "LetoviController.cs",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\LetoviController.cs",
+              "RelativeDocumentMoniker": "Airlines-project\\Controllers\\LetoviController.cs",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\LetoviController.cs",
+              "RelativeToolTip": "Airlines-project\\Controllers\\LetoviController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T19:41:32.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Airlines-project\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Airlines-project\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T19:41:31.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AviokompanijeController.cs",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\AviokompanijeController.cs",
+              "RelativeDocumentMoniker": "Airlines-project\\Controllers\\AviokompanijeController.cs",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\AviokompanijeController.cs",
+              "RelativeToolTip": "Airlines-project\\Controllers\\AviokompanijeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T19:41:30.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.html",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Index.html",
+              "RelativeDocumentMoniker": "Airlines-project\\Content\\Index.html",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Index.html",
+              "RelativeToolTip": "Airlines-project\\Content\\Index.html",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAEkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-22T19:39:46.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "KorisniciController.cs",
               "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\KorisniciController.cs",
               "RelativeDocumentMoniker": "Airlines-project\\Controllers\\KorisniciController.cs",
               "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\KorisniciController.cs",
               "RelativeToolTip": "Airlines-project\\Controllers\\KorisniciController.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAQwEcAAABNAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAEwEIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T19:36:50.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T17:22:38.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "login.html",
+              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\login.html",
+              "RelativeDocumentMoniker": "Airlines-project\\Content\\login.html",
+              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\login.html",
+              "RelativeToolTip": "Airlines-project\\Content\\login.html",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAEQAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-21T17:21:42.69Z"
             },
             {
               "$type": "Document",
@@ -245,48 +173,9 @@
               "RelativeDocumentMoniker": "Airlines-project\\Scripts\\index.js",
               "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Scripts\\index.js",
               "RelativeToolTip": "Airlines-project\\Scripts\\index.js",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAIwJMAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-10T19:28:04.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Let.cs",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Let.cs",
-              "RelativeDocumentMoniker": "Airlines-project\\Models\\Let.cs",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Models\\Let.cs",
-              "RelativeToolTip": "Airlines-project\\Models\\Let.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:09:58.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.html",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Index.html",
-              "RelativeDocumentMoniker": "Airlines-project\\Content\\Index.html",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Content\\Index.html",
-              "RelativeToolTip": "Airlines-project\\Content\\Index.html",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAmwG0AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-08T10:21:10.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LetoviController.cs",
-              "DocumentMoniker": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\LetoviController.cs",
-              "RelativeDocumentMoniker": "Airlines-project\\Controllers\\LetoviController.cs",
-              "ToolTip": "C:\\Users\\HomePC\\Documents\\GitHub\\Airlines-project\\Airlines-project\\Controllers\\LetoviController.cs",
-              "RelativeToolTip": "Airlines-project\\Controllers\\LetoviController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwBAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T10:02:18.823Z",
+              "WhenOpened": "2024-06-21T16:45:54.02Z",
               "EditorCaption": ""
             }
           ]

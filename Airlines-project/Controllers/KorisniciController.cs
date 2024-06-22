@@ -73,7 +73,8 @@ namespace Airlines_project.Controllers
 
             if (korisnik == null)
             {
-                return Ok(korisnici[0]);
+                return BadRequest("Greska prilikom preuzimanja korisnika iz baze");
+                //return Ok(korisnici[0]);
             }
 
             return Ok(korisnik);
