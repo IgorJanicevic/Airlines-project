@@ -8,7 +8,56 @@
     "DatumRodjenja": "1990-05-15T00:00:00",
     "Pol": 0,
     "TipKorisnika": 0,
-    "ListaRezervacija": []
+    "ListaRezervacija": [
+      {
+        "Korisnik": "IgorJ",
+        "Let": {
+          "Aviokompanija": "Airways International",
+          "PolaznaDestinacija": "Belgrade",
+          "OdredisnaDestinacija": "New York",
+          "DatumVremePolaska": "2024-07-15T10:00:00",
+          "DatumVremeDolaska": "2024-07-15T18:00:00",
+          "BrojSlobodnihMesta": 100,
+          "Cena": 750.00,
+          "Status": "Otkazan"
+        },
+        "BrojPutnika": 2,
+        "UkupnaCena": 1500.00,
+        "Status": "Odobrena"
+      },
+      {
+        "Korisnik": "IgorJ",
+        "Let": {
+          "Aviokompanija": "EuroJet",
+          "PolaznaDestinacija": "Belgrade",
+          "OdredisnaDestinacija": "London",
+          "DatumVremePolaska": "2024-08-01T14:30:00",
+          "DatumVremeDolaska": "2024-08-01T16:30:00",
+          "BrojSlobodnihMesta": 50,
+          "Cena": 750.00,
+          "Status": "Otkazan"
+        },
+        "BrojPutnika": 1,
+        "UkupnaCena": 750.00,
+        "Status": "Odobrena"
+      },
+      {
+        "Korisnik": "IgorJ",
+        "Let": {
+          "Aviokompanija": "Asian Air",
+          "PolaznaDestinacija": "Belgrade",
+          "OdredisnaDestinacija": "Tokyo",
+          "DatumVremePolaska": "2024-09-05T22:45:00",
+          "DatumVremeDolaska": "2024-09-06T10:45:00",
+          "BrojSlobodnihMesta": 200,
+          "Cena": 1000.00,
+          "Status": "Zavrsen"
+        },
+        "BrojPutnika": 3,
+        "UkupnaCena": 3000.00,
+        "Status": "Odobrena"
+      }
+    ]
   },
   {
     "KorisnickoIme": "ana_89",

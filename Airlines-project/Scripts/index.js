@@ -23,17 +23,15 @@
         // Event listener za prikaz aktivnih letova
         $('#activeFlightsLink').click(function (event) {
             event.preventDefault();
-            //alert(`Trenutni korisnik je: ${currentUser}`);
             loadFlights();
         }); 
         $('#finishedFlightsLink').click(function (event) {
             event.preventDefault();
-            //alert(`Trenutni korisnik je: ${currentUser}`);
-            //loadFinishedFlights();
+            loadUserFlights(2);
         });
         $('#cancelledFlightsLink').click(function (event) {
             event.preventDefault();
-            loadCancelledFlights();
+            loadUserFlights(1);
         });
 
        
@@ -78,14 +76,14 @@
     loadFlights();
 });
 
-function loadCancelledFlights() {
+function loadUserFlights(rezStatus) {
     const currentUser = sessionStorage.getItem('currentUser');
     if (currentUser) {
         // Učitavanje podataka o trenutnom korisniku na osnovu korisničkog imena
         $.get(`/api/korisnici/${currentUser.substring(1, currentUser.length - 1)}`, function (korisnik) {
             let rows = '';
             korisnik.ListaRezervacija.forEach(rez => {
-                if (rez.Status === 1) {
+                if (rez.Let.Status === rezStatus && rez.Status===1) {
                     let datumPolaskaObj = new Date(rez.Let.DatumVremePolaska);
                     let datumDolaskaObj = new Date(rez.Let.DatumVremeDolaska);
                     rows += `<tr>
