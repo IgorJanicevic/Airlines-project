@@ -39,7 +39,7 @@ namespace Airlines_project.Controllers
             }
         }
 
-        private List<Let> UcitajLetoveIzFajla()
+        public List<Let> UcitajLetoveIzFajla()
         {
             if (!File.Exists(letoviFilePath))
             {

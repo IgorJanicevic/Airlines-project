@@ -35,10 +35,9 @@ namespace Airlines_project.Controllers
             korisnici.Add(noviKorisnik);
             SaveKorisniciToFile(korisnici);
 
-            return Ok("Uspešno ste se registrovali!");
+            return Ok(noviKorisnik);
         }
 
-        // POST api/korisnici/prijava
         [HttpPost]
         [Route("api/korisnici/prijava")]
         public IHttpActionResult Prijava([FromBody] Korisnik loginData)
@@ -49,16 +48,17 @@ namespace Airlines_project.Controllers
             }
 
             List<Korisnik> korisnici = LoadKorisniciFromFile();
-            
-            Korisnik korisnik= korisnici.FirstOrDefault(kor=>kor.KorisnickoIme.Equals(loginData.KorisnickoIme) && kor.Lozinka.Equals(loginData.Lozinka));
+
+            Korisnik korisnik = korisnici.FirstOrDefault(kor => kor.KorisnickoIme.Equals(loginData.KorisnickoIme) && kor.Lozinka.Equals(loginData.Lozinka));
 
             if (korisnik == null)
             {
                 return BadRequest("Pogrešno korisničko ime ili lozinka. Molimo pokušajte ponovo.");
             }
 
-            return Ok($"Uspešno ste se ulogovali, {korisnik.Ime}!");
+            return Ok(korisnik); // Vraćamo JSON objekat korisnika
         }
+
 
 
 
@@ -80,13 +80,39 @@ namespace Airlines_project.Controllers
             return Ok(korisnik);
         }
 
+        [HttpPut]
+        [Route("api/korisnici/azuriraj")]
+        public IHttpActionResult AzurirajKorisnika([FromBody] Korisnik azuriraniKorisnik)
+        {
+            if (azuriraniKorisnik == null || string.IsNullOrWhiteSpace(azuriraniKorisnik.KorisnickoIme))
+            {
+                return BadRequest("Podaci o korisniku nisu ispravni.");
+            }
 
+            List<Korisnik> korisnici = LoadKorisniciFromFile();
+
+            Korisnik korisnik = korisnici.FirstOrDefault(k => k.KorisnickoIme.Equals(azuriraniKorisnik.KorisnickoIme));
+            if (korisnik == null)
+            {
+                return BadRequest("Korisnik nije pronađen.");
+            }
+
+            korisnik.Ime = azuriraniKorisnik.Ime;
+            korisnik.Prezime = azuriraniKorisnik.Prezime;
+            korisnik.Email = azuriraniKorisnik.Email;
+            korisnik.DatumRodjenja = azuriraniKorisnik.DatumRodjenja.Date; // Postavljanje samo datuma
+            korisnik.Pol = azuriraniKorisnik.Pol;
+
+            SaveKorisniciToFile(korisnici);
+
+            return Ok("Profil uspešno ažuriran.");
+        }
 
         // Privatne pomoćne funkcije za rad sa fajlom korisnici.json
 
         private List<Korisnik> LoadKorisniciFromFile()
-        {           
-            string jsonData = File.ReadAllText(korisniciFilePath);         
+        {
+            string jsonData = File.ReadAllText(korisniciFilePath);
             return JsonConvert.DeserializeObject<List<Korisnik>>(jsonData);
         }
 

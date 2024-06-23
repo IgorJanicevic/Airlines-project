@@ -1,0 +1,18 @@
+[
+  {
+    "RezervacijaId": 1,
+    "Korisnik": "IgorJ",
+    "Let": null,
+    "BrojPutnika": 1,
+    "UkupnaCena": 500.0,
+    "Status": 0
+  },
+  {
+    "RezervacijaId": 543,
+    "Korisnik": "IgorJ",
+    "Let": null,
+    "BrojPutnika": 2,
+    "UkupnaCena": 1000.0,
+    "Status": 0
+  }
+]

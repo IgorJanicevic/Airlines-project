@@ -101,7 +101,7 @@
                     $('#registerForm')[0].reset();
 
                     // Postavi trenutnog korisnika u sesiju
-                    sessionStorage.setItem('currentUser', JSON.stringify(korisnickoime));
+                    sessionStorage.setItem('currentUser', JSON.stringify(response));
 
                     // Redirekcija na index.html
                     window.location.href = 'index.html';

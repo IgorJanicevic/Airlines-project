@@ -4,8 +4,8 @@
     "Lozinka": "123",
     "Ime": "Igor",
     "Prezime": "Janicevic",
-    "Email": "marko.markovic@example.com",
-    "DatumRodjenja": "1990-05-15T00:00:00",
+    "Email": "igorjanicevic1@example.com",
+    "DatumRodjenja": "2002-06-18",
     "Pol": 0,
     "TipKorisnika": 0,
     "ListaRezervacija": [
@@ -18,12 +18,13 @@
           "DatumVremePolaska": "2024-07-15T10:00:00",
           "DatumVremeDolaska": "2024-07-15T18:00:00",
           "BrojSlobodnihMesta": 100,
-          "Cena": 750.00,
-          "Status": "Otkazan"
+          "BrojZauzetihMesta": 2,
+          "Cena": 750.0,
+          "Status": 1
         },
         "BrojPutnika": 2,
-        "UkupnaCena": 1500.00,
-        "Status": "Odobrena"
+        "UkupnaCena": 1500.0,
+        "Status": 1
       },
       {
         "Korisnik": "IgorJ",
@@ -34,12 +35,13 @@
           "DatumVremePolaska": "2024-08-01T14:30:00",
           "DatumVremeDolaska": "2024-08-01T16:30:00",
           "BrojSlobodnihMesta": 50,
-          "Cena": 750.00,
-          "Status": "Otkazan"
+          "BrojZauzetihMesta": 11,
+          "Cena": 750.0,
+          "Status": 1
         },
         "BrojPutnika": 1,
-        "UkupnaCena": 750.00,
-        "Status": "Odobrena"
+        "UkupnaCena": 750.0,
+        "Status": 0
       },
       {
         "Korisnik": "IgorJ",
@@ -50,12 +52,13 @@
           "DatumVremePolaska": "2024-09-05T22:45:00",
           "DatumVremeDolaska": "2024-09-06T10:45:00",
           "BrojSlobodnihMesta": 200,
-          "Cena": 1000.00,
-          "Status": "Zavrsen"
+          "BrojZauzetihMesta": 4,
+          "Cena": 1000.0,
+          "Status": 2
         },
         "BrojPutnika": 3,
-        "UkupnaCena": 3000.00,
-        "Status": "Odobrena"
+        "UkupnaCena": 3000.0,
+        "Status": 2
       }
     ]
   },
@@ -65,7 +68,7 @@
     "Ime": "Ana",
     "Prezime": "Anić",
     "Email": "ana.anic@example.com",
-    "DatumRodjenja": "1989-12-28T00:00:00",
+    "DatumRodjenja": "1989-12-28",
     "Pol": 1,
     "TipKorisnika": 1,
     "ListaRezervacija": []
@@ -76,9 +79,42 @@
     "Ime": "Ivan",
     "Prezime": "Janicevic",
     "Email": "milkomilkic@yahoo.com",
-    "DatumRodjenja": "2003-03-11T00:00:00",
+    "DatumRodjenja": "2003-03-11",
     "Pol": 0,
     "TipKorisnika": 0,
     "ListaRezervacija": []
+  },
+  {
+    "KorisnickoIme": "Darko",
+    "Lozinka": "dakic",
+    "Ime": "Dare",
+    "Prezime": "DAmninc",
+    "Email": "mmdd@gmail.com",
+    "DatumRodjenja": "2011-11-11",
+    "Pol": 2,
+    "TipKorisnika": 0,
+    "ListaRezervacija": null
+  },
+  {
+    "KorisnickoIme": "Damic",
+    "Lozinka": "DADADA",
+    "Ime": "Darko",
+    "Prezime": "DAKIC",
+    "Email": "ffff@gmail.com",
+    "DatumRodjenja": "2003-02-11",
+    "Pol": 2,
+    "TipKorisnika": 0,
+    "ListaRezervacija": null
+  },
+  {
+    "KorisnickoIme": "DArko2",
+    "Lozinka": "DADADA",
+    "Ime": "IVAND",
+    "Prezime": "DAREE",
+    "Email": "mmmm@gmail.com",
+    "DatumRodjenja": "2003-02-11",
+    "Pol": 2,
+    "TipKorisnika": 0,
+    "ListaRezervacija": null
   }
 ]

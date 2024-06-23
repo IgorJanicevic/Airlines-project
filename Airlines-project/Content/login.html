@@ -62,11 +62,11 @@
                     contentType: 'application/json',
                     data: JSON.stringify({ 'KorisnickoIme': username, 'Lozinka': password }),
                     success: function (response) {
-                        $('#message').text(response);
+                        $('#message').text('Uspešno ste se ulogovali!');
                         $('#message').removeClass('text-danger').addClass('text-success');
 
                         // Dodavanje korisnika u sessionStorage
-                        sessionStorage.setItem('currentUser', JSON.stringify(username));
+                        sessionStorage.setItem('currentUser', JSON.stringify(response));
 
                         // Redirekcija na index.html nakon uspešne prijave
                         window.location.href = 'index.html';
@@ -78,6 +78,7 @@
                 });
             });
         });
+
     </script>
 
 </body>

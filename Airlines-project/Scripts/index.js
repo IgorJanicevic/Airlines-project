@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
     // Provera da li postoji prijavljeni korisnik u sesiji
     let currentUser = sessionStorage.getItem('currentUser');
-
+    let rezStatus = 0;
     if (currentUser) {
         currentUser = JSON.parse(currentUser);
-        $('#navbarDropdown').html(`MyProfile (${currentUser})`);
+        $('#navbarDropdown').html(`MyProfile (${currentUser.KorisnickoIme})`);
 
         let dropdownMenu = `
         <div class="dropdown mr-3">
@@ -23,14 +23,17 @@
         // Event listener za prikaz aktivnih letova
         $('#activeFlightsLink').click(function (event) {
             event.preventDefault();
-            loadFlights();
+            rezStatus = 0;
+            loadFlights(0);
         }); 
         $('#finishedFlightsLink').click(function (event) {
             event.preventDefault();
+            rezStatus = 2;
             loadUserFlights(2);
         });
         $('#cancelledFlightsLink').click(function (event) {
             event.preventDefault();
+            rezStatus = 1;
             loadUserFlights(1);
         });
 
@@ -55,7 +58,7 @@
     // Event listener za pretragu letova
     $('#searchForm').submit(function (event) {
         event.preventDefault();
-        loadFlights();
+        loadFlights(rezStatus);
     });
 
     // Event listener za sortiranje letova
@@ -72,47 +75,72 @@
         }
     });
 
+
+    // Postavljanje click event handlera za flight-link
+    $(document).on('click', '.flight-link', function (event) {
+        event.preventDefault(); // Prevent default link behavior (prevents navigating immediately)
+
+        // Dobijamo LetId iz roditeljskog <tr> elementa
+        let letId = $(this).closest('tr').attr('id');
+
+
+        // Generišemo URL za rezervaciju leta
+        let reservationUrl = `rezervisiLet.html?LetId=${letId}`;
+
+        // Preusmeravamo korisnika na odgovarajuću stranicu
+        let currentUser = sessionStorage.getItem('currentUser');
+        if (currentUser) {
+            window.location.href = reservationUrl;
+        } else {
+            window.location.href = "login.html";
+        }
+    });
+
     // Učitavanje letova pri inicijalnom učitavanju stranice
-    loadFlights();
+    loadFlights(0);
 });
 
 function loadUserFlights(rezStatus) {
-    const currentUser = sessionStorage.getItem('currentUser');
+    // Provera da li postoji prijavljeni korisnik u sesiji
+    let currentUser = sessionStorage.getItem('currentUser');
+
     if (currentUser) {
-        // Učitavanje podataka o trenutnom korisniku na osnovu korisničkog imena
-        $.get(`/api/korisnici/${currentUser.substring(1, currentUser.length - 1)}`, function (korisnik) {
-            let rows = '';
-            korisnik.ListaRezervacija.forEach(rez => {
-                if (rez.Let.Status === rezStatus && rez.Status===1) {
-                    let datumPolaskaObj = new Date(rez.Let.DatumVremePolaska);
-                    let datumDolaskaObj = new Date(rez.Let.DatumVremeDolaska);
-                    rows += `<tr>
-                            <td class="avio-link">${rez.Let.Aviokompanija}</td>
+        currentUser = JSON.parse(currentUser);
+
+        let rows = '';
+
+        currentUser.ListaRezervacija.forEach(rez => {
+            // Proverite da li let ima status koji tražimo i da li je rezervacija aktivna (Status === 1)
+            if (rez.Let.Status === rezStatus && rez.Status === 1) {
+                let datumPolaskaObj = new Date(rez.Let.DatumVremePolaska);
+                let datumDolaskaObj = new Date(rez.Let.DatumVremeDolaska);
+                rows += `<tr  class="flight-link" id="${rez.Let.LetId}">
+                            <td>${rez.Let.Aviokompanija}</td>
                             <td>${rez.Let.PolaznaDestinacija}</td>
                             <td>${rez.Let.OdredisnaDestinacija}</td>
                             <td>${formatDate(datumPolaskaObj)}</td>
                             <td>${formatDate(datumDolaskaObj)}</td>
                             <td>${rez.Let.BrojSlobodnihMesta}</td>
+                            <td>${rez.Let.BrojZauzetihMesta}</td>
                             <td>${rez.Let.Cena}</td>
                         </tr>`;
-                }
-            });
-            $('#bodyF').html(rows); // Dodano: Prikazivanje podataka u tabeli
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-            console.error('Greška prilikom učitavanja podataka o korisniku:', textStatus, errorThrown);
+            }
         });
+
+        $('#bodyF').html(rows); // Prikazivanje podataka u tabeli
     } else {
         console.error('Nije prijavljen korisnik.');
-        // Možete uputiti korisnika na stranicu za prijavu ili na drugu početnu stranicu
     }
 }
 
-function loadFlights() {
+
+function loadFlights(rezStatus) {
     let aviokompanija = $('#aviokompanija').val().toLowerCase();
     let polaznaDestinacija = $('#polaznaDestinacija').val().toLowerCase();
     let odredisnaDestinacija = $('#odredisnaDestinacija').val().toLowerCase();
     let datumPolaska = $('#datumPolaska').val();
     let datumDolaska = $('#datumDolaska').val();
+    let letovi;
 
     $.ajax({
         type: 'GET',
@@ -126,20 +154,23 @@ function loadFlights() {
         },
         success: function (data) {
             let rows = '';
+            letovi = data;
 
-            data.forEach(function (let) {
+
+            letovi.forEach(function (let) {
                 let datumPolaskaObj = new Date(let.DatumVremePolaska);
                 let datumDolaskaObj = new Date(let.DatumVremeDolaska);
 
                 // Provera za prikaz svih letova ako nijedan filter nije unet
                 if (!aviokompanija && !polaznaDestinacija && !odredisnaDestinacija && !datumPolaska && !datumDolaska) {
-                    rows += `<tr>
-                            <td class="avio-link">${let.Aviokompanija}</td>
+                    rows += `<tr  class="flight-link" id="${let.LetId}">
+                            <td>${let.Aviokompanija}</td>
                             <td>${let.PolaznaDestinacija}</td>
                             <td>${let.OdredisnaDestinacija}</td>
                             <td>${formatDate(datumPolaskaObj)}</td>
                             <td>${formatDate(datumDolaskaObj)}</td>
                             <td>${let.BrojSlobodnihMesta}</td>
+                            <td>${let.BrojZauzetihMesta}</td>
                             <td>${let.Cena}</td>
                         </tr>`;
                 } else {
@@ -163,13 +194,14 @@ function loadFlights() {
                     }
 
                     if (isMatch) {
-                        rows += `<tr>
-                                <td class="avio-link">${let.Aviokompanija}</td>
+                        rows += `<tr  class="flight-link" id="${let.LetId}">
+                                <td>${let.Aviokompanija}</td>
                                 <td>${let.PolaznaDestinacija}</td>
                                 <td>${let.OdredisnaDestinacija}</td>
                                 <td>${formatDate(datumPolaskaObj)}</td>
                                 <td>${formatDate(datumDolaskaObj)}</td>
                                 <td>${let.BrojSlobodnihMesta}</td>
+                                <td>${let.BrojZauzetihMesta}</td>
                                 <td>${let.Cena}</td>
                             </tr>`;
                     }
@@ -184,10 +216,13 @@ function loadFlights() {
             $('#datumDolaska').val('');
         },
         error: function (xhr, status, error) {
-            console.error("Error fetching data:", xhr.responseText);
+            console.error("Error:", xhr.responseText);
         }
     });
 }
+
+   
+   
 
 function formatDate(date) {
     let day = date.getDate();
@@ -217,8 +252,8 @@ function sortFlights(ascending) {
     let tableRows = $('#bodyF tr').get();
 
     tableRows.sort(function (rowA, rowB) {
-        let priceA = parseFloat($(rowA).find('td').eq(6).text()); // 6 je index kolone sa cenom
-        let priceB = parseFloat($(rowB).find('td').eq(6).text());
+        let priceA = parseFloat($(rowA).find('td').eq(7).text()); // 6 je index kolone sa cenom
+        let priceB = parseFloat($(rowB).find('td').eq(7).text());
 
         if (ascending) {
             return priceA - priceB;
