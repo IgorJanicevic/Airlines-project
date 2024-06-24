@@ -7,6 +7,7 @@ namespace Airlines_project.Models
 {
     public class Recenzija
     {
+        public int RecenzijaId { get; set; }
         public string Recezent { get; set; } 
         public string Naslov { get; set; }
         public string Sadrzaj { get; set; }

@@ -4,79 +4,23 @@
     "Naziv": "Air Serbia",
     "Adresa": "Jurija Gagarina 12, Beograd, Srbija",
     "KontaktInformacije": "+381 11 1234567",
-    "Letovi": [
-      {
-        "Aviokompanija": "Air Serbia",
-        "PolaznaDestinacija": "Beograd",
-        "OdredisnaDestinacija": "New York",
-        "DatumVremePolaska": "2024-06-15T14:00:00",
-        "DatumVremeDolaska": "2024-06-15T18:00:00",
-        "BrojSlobodnihMesta": 50,
-        "Cena": 500
-      }
-    ],
-    "Recenzije": [
-      {
-        "Recezent": "Igor Janicevic",
-        "Naslov": "Odlična usluga i udobnost",
-        "Sadrzaj": "Sve pohvale za aviokompaniju. Usuga je bila na visokom nivou.",
-        "Slika": "Resources/Images/slika1.jpg",
-        "Status": "Odobrena"
-      }
-    ]
+    "Letovi": [1],
+    "Recenzije": [1]
   },
   {
     "AviokompanijaId": 2,
     "Naziv": "Lufthansa",
     "Adresa": "Venloer Str. 151-153, 50672 Köln, Germany",
     "KontaktInformacije": "+49 69 867987",
-    "Letovi": [
-      {
-        "Aviokompanija": "Lufthansa",
-        "PolaznaDestinacija": "Beograd",
-        "OdredisnaDestinacija": "Frankfurt",
-        "DatumVremePolaska": "2024-06-15T08:00:00",
-        "DatumVremeDolaska": "2024-06-15T10:00:00",
-        "BrojSlobodnihMesta": 50,
-        "Cena": 150,
-        "Status": "Aktivan"
-      }
-    ],
-    "Recenzije": [
-      {
-        "Recezent": "Baki",
-        "Naslov": "Vrlo dobra usluga, ali skupa",
-        "Sadrzaj": "Usluga je bila vrlo dobra, ali karta je bila skuplja nego što sam očekivao.",
-        "Slika": "Resources/Images/slika2.jpg",
-        "Status": "Odobrena"
-      }
-    ]
+    "Letovi": [2],
+    "Recenzije": [2]
   },
   {
     "AviokompanijaId": 3,
     "Naziv": "Airline Turkish",
     "Adresa": "Istanbul Str. 151-153, 50672 Center, Turkey",
     "KontaktInformacije": "+49 69 867987",
-    "Letovi": [
-      {
-        "Aviokompanija": "Turkish Airlines",
-        "PolaznaDestinacija": "Beograd",
-        "OdredisnaDestinacija": "Istanbul",
-        "DatumVremePolaska": "2024-06-20T20:00:00",
-        "DatumVremeDolaska": "2024-06-20T22:00:00",
-        "BrojSlobodnihMesta": 75,
-        "Cena": 200,
-        "Status": "Aktivan"
-      }
-    ],
-    "Recenzije": [
-      {
-        "Recezent": "Teodora22",
-        "Naslov": "Dobra usluga",
-        "Sadrzaj": "Usluga je bila na zadovoljavajućem nivou, ali moglo bi biti bolje.",
-        "Slika": "Resources/Images/slika3.jpg",
-        "Status": "Odobrena"
-      }
-    ]
+    "Letovi": [3],
+    "Recenzije": [3]
   }
 ]

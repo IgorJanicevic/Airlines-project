@@ -1,0 +1,29 @@
+﻿[
+  {
+    "RecenzijaId": 1,
+    "Recezent": "Igor Janicevic",
+    "Naslov": "Odlična usluga i udobnost",
+    "Sadrzaj": "Sve pohvale za aviokompaniju. Usuga je bila na visokom nivou.",
+    "Slika": "https://d239aqhc1m39lr.cloudfront.net/Arhiva%2Fairplane-2619434_960_720.jpg",
+    "Status": "Odobrena",
+    "AviokompanijaId": 1
+  },
+  {
+    "RecenzijaId": 2,
+    "Recezent": "Baki",
+    "Naslov": "Vrlo dobra usluga, ali skupa",
+    "Sadrzaj": "Usluga je bila vrlo dobra, ali karta je bila skuplja nego što sam očekivao.",
+    "Slika": "https://www.kurir.rs/data/images/2016/12/19/09/1061161_er-korjo-severna-koreja_ls.jpg",
+    "Status": "Odobrena",
+    "AviokompanijaId": 2
+  },
+  {
+    "RecenzijaId": 3,
+    "Recezent": "Teodora22",
+    "Naslov": "Dobra usluga",
+    "Sadrzaj": "Usluga je bila na zadovoljavajućem nivou, ali moglo bi biti bolje.",
+    "Slika": "https://static.vecteezy.com/system/resources/previews/025/476/005/large_2x/portrait-selfie-happy-tourist-couple-taking-selfie-inside-airplane-ai-generated-photo.jpeg",
+    "Status": "Odobrena",
+    "AviokompanijaId": 3
+  }
+]

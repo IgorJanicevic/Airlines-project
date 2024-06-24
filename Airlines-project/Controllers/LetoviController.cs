@@ -39,6 +39,28 @@ namespace Airlines_project.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("api/letovi/{letId}")]
+        public IHttpActionResult DohvatiLet(int letId)
+        {
+            try
+            {
+                var letovi = UcitajLetoveIzFajla();
+                foreach(Let l in letovi)
+                {
+                    if (l.LetId == letId)
+                        return Ok(l);
+                }
+                return NotFound();
+
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
         public List<Let> UcitajLetoveIzFajla()
         {
             if (!File.Exists(letoviFilePath))
@@ -50,7 +72,8 @@ namespace Airlines_project.Controllers
             return JsonConvert.DeserializeObject<List<Let>>(json);
         }
 
-        private void SacuvajLetoveUFajl(List<Let> letovi)
+
+    private void SacuvajLetoveUFajl(List<Let> letovi)
         {
             var json = JsonConvert.SerializeObject(letovi, Formatting.Indented);
             File.WriteAllText(letoviFilePath, json);

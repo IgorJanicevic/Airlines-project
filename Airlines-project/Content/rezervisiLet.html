@@ -46,7 +46,6 @@
             let currentUser = sessionStorage.getItem('currentUser');
             currentUser = JSON.parse(currentUser);
             const korIme = currentUser.KorisnickoIme;
-            alert(korIme);
 
             const urlParams = new URLSearchParams(window.location.search);
             const letId = urlParams.get('LetId');
@@ -64,25 +63,41 @@
                     return;
                 }
 
-                // AJAX poziv za rezervaciju leta
+                // AJAX poziv za pronalaženje leta
                 $.ajax({
-                    type: 'POST',
-                    url: '/api/rezervacije/rezervisi',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        Korisnik: korIme,
-                        BrojPutnika: parseInt(brojMesta)  // Pretvaranje u broj
-                    }),
-                    success: function (response) {
-                        alert('Uspešno ste rezervisali mesta.');
-                        // Preusmeri korisnika na neku stranicu nakon uspešne rezervacije
-                        window.location.href = 'index.html';
+                    type: 'GET',
+                    url: `/api/letovi/${letId}`,
+                    success: function (pronadjeniLet) {
+                        // AJAX poziv za rezervaciju leta
+                        $.ajax({
+                            type: 'POST',
+                            url: '/api/rezervacije/rezervisi',
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                RezervacijaId: parseInt(letId), // Šaljemo id leta
+                                Let: pronadjeniLet,
+                                Korisnik: korIme,
+                                BrojPutnika: parseInt(brojMesta)  // Pretvaranje u broj
+                            }),
+                            success: function (response) {
+                                alert('Uspešno ste rezervisali mesta.');
+                                // Preusmeri korisnika na neku stranicu nakon uspešne rezervacije
+                                window.location.href = 'index.html';
+                            },
+                            error: function (xhr, status, error) {
+                                alert('Greška prilikom rezervacije: ' + error);
+                            }
+                        });
                     },
                     error: function (xhr, status, error) {
-                        alert('Greška prilikom rezervacije: ' + error);
+                        alert('Greška prilikom pronalaženja leta: ' + error);
                     }
                 });
             });
+
+
+
+           
         });
     </script>
 

@@ -28,8 +28,8 @@ namespace Airlines_project.Controllers
             // Učitavanje svih letova iz fajla
             List<Let> letovi = LoadLetoviFromFile();
 
-            // Pronalaženje leta za rezervaciju
-            Let letZaRezervaciju = letovi.FirstOrDefault(l => l.LetId == 1);
+            // Pronalaženje leta za rezervaciju // Hardkodovano
+            Let letZaRezervaciju = letovi.FirstOrDefault(l => l.LetId == novaRezervacija.RezervacijaId);
 
             if (letZaRezervaciju == null)
             {
@@ -60,6 +60,71 @@ namespace Airlines_project.Controllers
 
             return Ok("Uspešno ste rezervisali mesta.");
         }
+
+        [HttpGet]
+        [Route("api/rezervacije")]
+        public IHttpActionResult DohvatiRezervacije()
+        {
+            try
+            {
+                List<Rezervacija> rezervacije = LoadRezervacijeFromFile();
+                return Ok(rezervacije);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+
+
+
+        [HttpPut]
+        [Route("api/rezervacije/otkazi/{rezervacijaId}")]
+        public IHttpActionResult OtkaziRezervaciju(int rezervacijaId)
+        {
+            try
+            {
+                
+                var rezervacije = LoadRezervacijeFromFile();
+                var rezervacija = rezervacije.FirstOrDefault(r => r.RezervacijaId == rezervacijaId);
+
+                if (rezervacija == null)
+                {
+                    return NotFound();
+                }
+
+                // Provera da li je moguće otkazati rezervaciju
+                if (rezervacija.Status != StatusRezervacije.Kreirana && rezervacija.Status != StatusRezervacije.Odobrena)
+                {
+                    return BadRequest("Rezervacija se ne može otkazati jer nije u statusu Kreirana ili Odobrena.");
+                }
+
+                // Otkazivanje rezervacije
+                var letovi = LoadLetoviFromFile();
+                foreach(Let l in letovi)
+                {
+                    if(l.LetId == rezervacija.Let.LetId)
+                    {
+                        l.BrojSlobodnihMesta += rezervacija.BrojPutnika;
+                        l.BrojZauzetihMesta -= rezervacija.BrojPutnika;
+                    }
+                }
+                SaveLetoviToFile(letovi);
+
+                // Ažuriranje statusa rezervacije
+                rezervacija.Status = StatusRezervacije.Otkazana;
+
+                SaveRezervacijeToFile(rezervacije);
+
+                return Ok("Rezervacija je uspešno otkazana.");
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
 
         // Privatne pomoćne funkcije za rad sa fajlovima
 

@@ -9,14 +9,73 @@
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .aviokompanija-details {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .aviokompanija-details h5 {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            .aviokompanija-details p, .aviokompanija-details h6 {
+                margin-bottom: 5px;
+            }
+
+            .aviokompanija-details ul {
+                padding-left: 20px;
+            }
+
+            .aviokompanija-details li {
+                margin-bottom: 10px;
+            }
+
+            .aviokompanija-details img {
+                max-width: 140px;
+                max-height: 350px;
+                margin-top: 10px;
+            }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="Index.html">Travelgo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MyProfile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profile.html">MyProfile</a>
+                        <a class="dropdown-item" href="login.html">Login</a>
+                        <a class="dropdown-item" id="logoutLink" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container mt-4">
         <h2 class="text-center mb-4">Podaci o aviokompaniji</h2>
 
-        <div id="aviokompanijaDetails"></div>
+        <div id="aviokompanijaDetails" class="aviokompanija-details"></div>
     </div>
-
     <script>
         $(document).ready(function () {
             const urlParams = new URLSearchParams(window.location.search);
@@ -27,22 +86,28 @@
                 $.get(`/api/aviokompanije/${aviokompanijaId}`, function (aviokompanija) {
                     const aviokompanijaDetails = $('#aviokompanijaDetails');
 
-                    const aviokompanijaElement = `
-                            <div>
-                                <h5>${aviokompanija.Naziv}</h5>
-                                <p><strong>Adresa:</strong> ${aviokompanija.Adresa}</p>
-                                <p><strong>Kontakt:</strong> ${aviokompanija.KontaktInformacije}</p>
-                                <h6>Letovi:</h6>
-                                <ul>
-                                    ${generateLetoviList(aviokompanija.Letovi)}
-                                </ul>
-                                <h6>Recenzije:</h6>
-                                <ul>
-                                    ${generateRecenzijeList(aviokompanija.Recenzije)}
-                                </ul>
-                            </div>
-                        `;
-                    aviokompanijaDetails.html(aviokompanijaElement);
+                    // Poziv funkcije generateLetoviList sa callback-om
+                    generateLetoviList(aviokompanija.Letovi, function (letoviList) {
+                        // Poziv funkcije generateRecenzijeList sa callback-om
+                        generateRecenzijeList(aviokompanija.Recenzije, function (recenzijeList) {
+                            const aviokompanijaElement = `
+                                            <div>
+                                                <h5>${aviokompanija.Naziv}</h5>
+                                                <p><strong>Adresa:</strong> ${aviokompanija.Adresa}</p>
+                                                <p><strong>Kontakt:</strong> ${aviokompanija.KontaktInformacije}</p>
+                                                <h6>Letovi:</h6>
+                                                <ul>
+                                                    ${letoviList}
+                                                </ul>
+                                                <h6>Recenzije:</h6>
+                                                <ul>
+                                                    ${recenzijeList}
+                                                </ul>
+                                            </div>
+                                        `;
+                            aviokompanijaDetails.html(aviokompanijaElement);
+                        });
+                    });
                 }).fail(function (jqXHR, textStatus, errorThrown) {
                     console.error('Greška prilikom učitavanja podataka o aviokompaniji:', textStatus, errorThrown);
                 });
@@ -53,46 +118,62 @@
             }
         });
 
-        function generateLetoviList(letovi) {
-            let letoviList = '';
-            if (letovi.length > 0) {
-                letovi.forEach(let => {
-                    letoviList += `
-                            <li>
-                                ${let.PolaznaDestinacija} - ${let.OdredisnaDestinacija}, Polazak: ${new Date(let.DatumVremePolaska).toLocaleString()}, Dolazak: ${new Date(let.DatumVremeDolaska).toLocaleString()}, Mesta: ${let.BrojSlobodnihMesta}, Cena: $${let.Cena}
-                            </li>
-                        `;
+        function generateLetoviList(letoviIds, callback) {
+            // Fetch all letovi from the server
+            fetch('/api/letovi')
+                .then(response => response.json())
+                .then(letovi => {
+                    let letoviList = '';
+                    if (letovi.length > 0) {
+                        letovi.forEach(let => {
+                            if (letoviIds.includes(let.LetId)) {
+                                letoviList += `
+                                                <li>
+                                                    ${let.PolaznaDestinacija} - ${let.OdredisnaDestinacija}, Polazak: ${new Date(let.DatumVremePolaska).toLocaleString()}, Dolazak: ${new Date(let.DatumVremeDolaska).toLocaleString()}, Mesta: ${let.BrojSlobodnihMesta}, Cena: $${let.Cena}
+                                                </li>
+                                            `;
+                            }
+                        });
+                    } else {
+                        letoviList = '<li>Nema dostupnih letova.</li>';
+                    }
+                    callback(letoviList); // Pozivamo callback sa generisanim HTML-om
+                })
+                .catch(error => {
+                    console.error('Greška prilikom dohvatanja letova:', error);
+                    callback('<li>Greška prilikom dohvatanja letova.</li>'); // Pozivamo callback sa greškom
                 });
-            } else {
-                letoviList = '<li>Nema dostupnih letova.</li>';
-            }
-            return letoviList;
         }
 
 
-        function generateRecenzijeList(recenzije) {
-            let recenzijeList = '';
-            if (recenzije.length > 0) {
-                recenzije.forEach(recenzija => {
-                    if (recenzija.Status === 1) { // Assuming 1 corresponds to "Odobrena"
-                        recenzijeList += `
-                <li>
-                    <h5>${recenzija.Recezent}</h5>`;
-
-                        if (recenzija.Slika && recenzija.Slika.trim() !== "") {
-                            const imageUrl = encodeURI(recenzija.Slika);
-                            recenzijeList += `<img src='${imageUrl}' alt='${recenzija.Naslov}' style='width: 100px; height: auto;'>`;
-                            
-                        }
-
-                        recenzijeList += `<p>${recenzija.Sadrzaj}</p>
-                </li>`;
+        function generateRecenzijeList(recenzijeIds, callback) {
+            // Fetch all recenzije from the server
+            fetch('/api/recenzije')
+                .then(response => response.json())
+                .then(recenzije => {
+                    let recenzijeList = '';
+                    if (recenzije.length > 0) {
+                        recenzije.forEach(recenzija => {
+                            if (recenzijeIds.includes(recenzija.RecenzijaId)) {
+                                recenzijeList += `
+                                                <li>
+                                                    <strong>${recenzija.Naslov}</strong><br/>
+                                                    ${recenzija.Sadrzaj}<br/>
+                                                    <img src="${recenzija.Slika}" alt="Recenzija slika" style="max-width: 140px; max-height: 350px;" /><br/>
+                                                    <em>Autor: ${recenzija.Recezent}</em>
+                                                </li>
+                                            `;
+                            }
+                        });
+                    } else {
+                        recenzijeList = '<li>Nema dostupnih recenzija.</li>';
                     }
+                    callback(recenzijeList); // Pozivamo callback sa generisanim HTML-om
+                })
+                .catch(error => {
+                    console.error('Greška prilikom dohvatanja recenzija:', error);
+                    callback('<li>Greška prilikom dohvatanja recenzija.</li>'); // Pozivamo callback sa greškom
                 });
-            } else {
-                recenzijeList = '<li>Nema dostupnih recenzija.</li>';
-            }
-            return recenzijeList;
         }
     </script>
 </body>

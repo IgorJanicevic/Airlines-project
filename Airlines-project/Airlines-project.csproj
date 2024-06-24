@@ -159,6 +159,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KorisniciController.cs" />
     <Compile Include="Controllers\LetoviController.cs" />
+    <Compile Include="Controllers\RecenzijeController.cs" />
     <Compile Include="Controllers\RezervacijeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,6 +234,7 @@
     <Content Include="Scripts\jquery-1.10.2" />
     <Content Include="App_Data\aviokompanije.json" />
     <Content Include="App_Data\rezervacije.json" />
+    <Content Include="App_Data\recenzije.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

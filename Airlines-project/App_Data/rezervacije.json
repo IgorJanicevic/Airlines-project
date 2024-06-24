@@ -2,7 +2,18 @@
   {
     "RezervacijaId": 1,
     "Korisnik": "IgorJ",
-    "Let": null,
+    "Let": {
+      "LetId": 2,
+      "Aviokompanija": "Lufthansa",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Frankfurt",
+      "DatumVremePolaska": "2024-06-15T08:00:00",
+      "DatumVremeDolaska": "2024-06-15T10:00:00",
+      "BrojSlobodnihMesta": 50,
+      "BrojZauzetihMesta": 4,
+      "Cena": 150.0,
+      "Status": 0
+    },
     "BrojPutnika": 1,
     "UkupnaCena": 500.0,
     "Status": 0
@@ -10,9 +21,172 @@
   {
     "RezervacijaId": 543,
     "Korisnik": "IgorJ",
-    "Let": null,
+    "Let": {
+      "LetId": 1,
+      "Aviokompanija": "Air Serbia",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "New York",
+      "DatumVremePolaska": "2024-06-10T10:00:00",
+      "DatumVremeDolaska": "2024-06-10T16:00:00",
+      "BrojSlobodnihMesta": 17,
+      "BrojZauzetihMesta": 94,
+      "Cena": 500.0,
+      "Status": 0
+    },
     "BrojPutnika": 2,
     "UkupnaCena": 1000.0,
     "Status": 0
+  },
+  {
+    "RezervacijaId": 443,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 2,
+      "Aviokompanija": "Lufthansa",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Frankfurt",
+      "DatumVremePolaska": "2024-06-15T08:00:00",
+      "DatumVremeDolaska": "2024-06-15T10:00:00",
+      "BrojSlobodnihMesta": 50,
+      "BrojZauzetihMesta": 4,
+      "Cena": 150.0,
+      "Status": 0
+    },
+    "BrojPutnika": 3,
+    "UkupnaCena": 1500.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 1003,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 2,
+      "Aviokompanija": "Lufthansa",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Frankfurt",
+      "DatumVremePolaska": "2024-06-15T08:00:00",
+      "DatumVremeDolaska": "2024-06-15T10:00:00",
+      "BrojSlobodnihMesta": 45,
+      "BrojZauzetihMesta": 9,
+      "Cena": 150.0,
+      "Status": 0
+    },
+    "BrojPutnika": 1,
+    "UkupnaCena": 150.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 376,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 2,
+      "Aviokompanija": "Lufthansa",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Frankfurt",
+      "DatumVremePolaska": "2024-06-15T08:00:00",
+      "DatumVremeDolaska": "2024-06-15T10:00:00",
+      "BrojSlobodnihMesta": 44,
+      "BrojZauzetihMesta": 10,
+      "Cena": 150.0,
+      "Status": 0
+    },
+    "BrojPutnika": 2,
+    "UkupnaCena": 300.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 1011,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 3,
+      "Aviokompanija": "Turkish Airlines",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Istanbul",
+      "DatumVremePolaska": "2024-06-20T20:00:00",
+      "DatumVremeDolaska": "2024-06-20T22:00:00",
+      "BrojSlobodnihMesta": 55,
+      "BrojZauzetihMesta": 22,
+      "Cena": 200.0,
+      "Status": 0
+    },
+    "BrojPutnika": 5,
+    "UkupnaCena": 1000.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 417,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 3,
+      "Aviokompanija": "Turkish Airlines",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Istanbul",
+      "DatumVremePolaska": "2024-06-20T20:00:00",
+      "DatumVremeDolaska": "2024-06-20T22:00:00",
+      "BrojSlobodnihMesta": 50,
+      "BrojZauzetihMesta": 27,
+      "Cena": 200.0,
+      "Status": 0
+    },
+    "BrojPutnika": 5,
+    "UkupnaCena": 1000.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 292,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 3,
+      "Aviokompanija": "Turkish Airlines",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Istanbul",
+      "DatumVremePolaska": "2024-06-20T20:00:00",
+      "DatumVremeDolaska": "2024-06-20T22:00:00",
+      "BrojSlobodnihMesta": 45,
+      "BrojZauzetihMesta": 32,
+      "Cena": 200.0,
+      "Status": 0
+    },
+    "BrojPutnika": 5,
+    "UkupnaCena": 1000.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 1104,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 3,
+      "Aviokompanija": "Turkish Airlines",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "Istanbul",
+      "DatumVremePolaska": "2024-06-20T20:00:00",
+      "DatumVremeDolaska": "2024-06-20T22:00:00",
+      "BrojSlobodnihMesta": 40,
+      "BrojZauzetihMesta": 42,
+      "Cena": 200.0,
+      "Status": 0
+    },
+    "BrojPutnika": 2,
+    "UkupnaCena": 400.0,
+    "Status": 2
+  },
+  {
+    "RezervacijaId": 755,
+    "Korisnik": "IgorJ",
+    "Let": {
+      "LetId": 1,
+      "Aviokompanija": "Air Serbia",
+      "PolaznaDestinacija": "Beograd",
+      "OdredisnaDestinacija": "New York",
+      "DatumVremePolaska": "2024-06-10T10:00:00",
+      "DatumVremeDolaska": "2024-06-10T16:00:00",
+      "BrojSlobodnihMesta": 18,
+      "BrojZauzetihMesta": 32,
+      "Cena": 500.0,
+      "Status": 0
+    },
+    "BrojPutnika": 2,
+    "UkupnaCena": 1000.0,
+    "Status": 2
   }
 ]

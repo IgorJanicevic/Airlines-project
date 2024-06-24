@@ -17,7 +17,7 @@ namespace Airlines_project.Models
         public DateTime DatumRodjenja { get; set; }
         public Pol Pol { get; set; }
         public TipKorisnika TipKorisnika { get; set; }
-        public List<Rezervacija> ListaRezervacija { get; set; }
+        public List<int> ListaRezervacija { get; set; }
     }
 
     public enum Pol

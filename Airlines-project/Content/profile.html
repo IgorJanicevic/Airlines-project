@@ -99,7 +99,7 @@
                             <option value="3">ZAVRŠENA</option>
                         </select>
                     </div>
-                    <table class="table table-striped">
+                    <table class="table table-sm">
                         <thead>
                             <tr>
                                 <th>Kompanija</th>
@@ -107,8 +107,9 @@
                                 <th>Odredišna destinacija</th>
                                 <th>Datum polaska</th>
                                 <th>Datum dolaska</th>
-                                <th >Broj rezervacija</th>
+                                <th>Broj rezervacija</th>
                                 <th>Cena</th>
+                                <th class="otkaziRow">Otkazi</th>
                             </tr>
                         </thead>
                         <tbody id="reservationTableBody">
@@ -195,28 +196,71 @@
         }
 
         function loadReservations(user, status) {
-            let reservations = user.ListaRezervacija;
-            
-            let rows = '';
+            $.ajax({
+                type: 'GET',
+                url: '/api/rezervacije',
+                success: function (rezervacije) {
+                    let rows = '';
 
-            reservations.forEach(rez => {
-                if (rez.Status == status) {
-                    let datumPolaskaObj = new Date(rez.Let.DatumVremePolaska);
-                    let datumDolaskaObj = new Date(rez.Let.DatumVremeDolaska);
-                    rows += `<tr>
-                 <td>${rez.Let.Aviokompanija}</td>
-                 <td>${rez.Let.PolaznaDestinacija}</td>
-                 <td>${rez.Let.OdredisnaDestinacija}</td>
-                 <td>${formatDate(datumPolaskaObj)}</td>
-                 <td>${formatDate(datumDolaskaObj)}</td>
-                 <td>${rez.BrojPutnika}</td>
-                 <td>${rez.UkupnaCena}</td>
-             </tr>`; }
-               
+                    rezervacije.forEach(rez => {
+                        if (rez.Korisnik === user.KorisnickoIme && rez.Status == status) {
+
+                            let datumPolaskaObj = new Date(rez.Let.DatumVremePolaska);
+                            let datumDolaskaObj = new Date(rez.Let.DatumVremeDolaska);
+                            rows += `<tr>
+                            <td>${rez.Let.Aviokompanija}</td>
+                            <td>${rez.Let.PolaznaDestinacija}</td>
+                            <td>${rez.Let.OdredisnaDestinacija}</td>
+                            <td>${formatDate(datumPolaskaObj)}</td>
+                            <td>${formatDate(datumDolaskaObj)}</td>
+                            <td>${rez.BrojPutnika}</td>
+                            <td>${rez.UkupnaCena}</td>
+                            `
+                            if (status == 0 || status == 1) {
+                                rows += `<td><button class="btn btn-danger cancel-reservation" data-reservation-id="${rez.RezervacijaId}">Otkaži</button></td>`;
+                            } else {
+                                $('.otkaziRow').hide();
+
+                            }
+
+                            rows += '</tr>';
+                        }
+                    });
+                    $('#reservationTableBody').html(rows);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Greška prilikom učitavanja rezervacija:', error);
+                }
             });
-
-            $('#reservationTableBody').html(rows);
         }
+
+
+        // Funkcija za otkazivanje rezervacije
+        function cancelReservation(rezervacijaId) {
+            alert(rezervacijaId);
+            $.ajax({
+                type: 'PUT',
+                url: `/api/rezervacije/otkazi/${rezervacijaId}`,
+                success: function (response) {
+                    Thread.Sleep(1000);
+                    // Ponovno učitavanje rezervacija nakon otkazivanja
+                    loadReservations(currentUser, $('#statusFilter').val());
+                    alert('Rezervacija je uspešno otkazana.');
+                    
+                },
+                error: function (xhr, status, error) {
+                    alert('Greška prilikom otkazivanja rezervacije: ' + error);
+                }
+            });
+        }
+
+        // Event handler za klik na dugme "Otkaži"
+        $(document).on('click', '.cancel-reservation', function () {
+            let rezervacijaId = $(this).data('reservation-id');
+            cancelReservation(rezervacijaId);
+        });
+
+
 
         function formatDate(date) {
             let day = String(date.getDate()).padStart(2, '0');

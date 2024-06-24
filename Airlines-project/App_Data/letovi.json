@@ -6,8 +6,8 @@
     "OdredisnaDestinacija": "New York",
     "DatumVremePolaska": "2024-06-10T10:00:00",
     "DatumVremeDolaska": "2024-06-10T16:00:00",
-    "BrojSlobodnihMesta": 19,
-    "BrojZauzetihMesta": 92,
+    "BrojSlobodnihMesta": 18,
+    "BrojZauzetihMesta": 32,
     "Cena": 500.0,
     "Status": 0
   },
@@ -18,8 +18,8 @@
     "OdredisnaDestinacija": "Frankfurt",
     "DatumVremePolaska": "2024-06-15T08:00:00",
     "DatumVremeDolaska": "2024-06-15T10:00:00",
-    "BrojSlobodnihMesta": 50,
-    "BrojZauzetihMesta": 4,
+    "BrojSlobodnihMesta": 19,
+    "BrojZauzetihMesta": 35,
     "Cena": 150.0,
     "Status": 0
   },
@@ -30,8 +30,8 @@
     "OdredisnaDestinacija": "Istanbul",
     "DatumVremePolaska": "2024-06-20T20:00:00",
     "DatumVremeDolaska": "2024-06-20T22:00:00",
-    "BrojSlobodnihMesta": 75,
-    "BrojZauzetihMesta": 2,
+    "BrojSlobodnihMesta": 40,
+    "BrojZauzetihMesta": 44,
     "Cena": 200.0,
     "Status": 0
   }

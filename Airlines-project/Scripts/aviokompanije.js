@@ -25,12 +25,8 @@
         const aviokompanijaId = $(this).data('aviokompanija-id');
 
         // Redirekcija na stranicu aviokompanija.html sa id-em aviokompanije u URL-u
-        let currentUser = sessionStorage.getItem('currentUser');
-        if (currentUser) {
             window.location.href = `aviokompanija.html?id=${aviokompanijaId}`;
-        } else {
-            window.location.href = `login.html`;
-        }
+        
     });
 
 });
